@@ -2,7 +2,7 @@
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-section">
-          <p>&copy; {{ currentYear }} Owlee. Tous droits réservés.</p>
+          <p>&copy; {{ currentYear }} ManaTalent. Tous droits réservés.</p>
         </div>
         
         <div class="footer-section">
@@ -11,10 +11,6 @@
             <a href="#" class="footer-link">Conditions d'utilisation</a>
             <a href="#" class="footer-link">Support</a>
           </div>
-        </div>
-        
-        <div class="footer-section">
-          <p class="version">Version 2.1.0</p>
         </div>
       </div>
     </footer>

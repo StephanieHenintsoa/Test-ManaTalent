@@ -13,7 +13,7 @@
         <ul class="nav-list">
           <!-- Entity -->
           <li class="nav-item">
-            <router-link to="/" class="nav-link" exact-active-class="active">
+            <router-link to="/api/entities" class="nav-link" exact-active-class="active">
               <span class="nav-icon">🏠</span>
               <span>Entity</span>
             </router-link>
@@ -57,18 +57,7 @@
             </ul>
           </li>
 
-          <!-- Groups -->
-          <li class="nav-item">
-            <router-link to="/groups" class="nav-link" active-class="active">
-              <span class="nav-icon">👨‍👩‍👧‍👦</span>
-              <span>Groupes</span>
-            </router-link>
-          </li>
-          <li>
-            <router-link to="/user-entities/1" class="nav-link" active-class="active">
-              🔍 Détail par ID
-            </router-link>
-          </li>
+          
 
         </ul>
       </div>

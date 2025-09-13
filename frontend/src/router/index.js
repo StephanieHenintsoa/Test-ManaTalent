@@ -2,6 +2,10 @@ import { createRouter, createWebHistory } from "vue-router";
 
 // Composants Users
 import UserList from "../views/UserList.vue";
+import UserDetail from "../views/UserDetail.vue";
+
+// Composants Entities
+import EntityList from "../views/EntityList.vue";
 
 // Composants User-Entities
 import UserEntityList from "../views/UserEntityList.vue";
@@ -12,15 +16,19 @@ import UserEntityDetail from "../views/UserEntityDetail.vue";
 
 const routes = [
   // Users
-  { path: "/api/users", component: UserList },
+  { path: "/api/users", name: "UserList", component: UserList },
+  { path: "/api/users/:id", name: "UserDetail", component: UserDetail, props: true },
+
+  // Entities
+  { path: "/api/entities", name: "EntityList", component: EntityList },
+  // { path: "/api/entities/:id", name: "EntityDetail", component: EntityDetail, props: true },
 
   // User-Entities
-  { path: "/api/user-entities/", component: UserEntityList },          // 📋 Liste toutes les relations
-  { path: "/api/user-entities/assign", component: UserEntityAssign }, // ➕ Assigner une entité
-  { path: "/api/user-entities/update", component: UserEntityUpdate }, // ✏️ Mettre à jour une relation
-  { path: "/api/user-entities/remove", component: UserEntityRemove }, // ❌ Supprimer une relation
-  { path: "/api/user-entities/:id", component: UserEntityDetail, props: true },
-
+  { path: "/api/user-entities", name: "UserEntityList", component: UserEntityList },
+  { path: "/api/user-entities/assign", name: "UserEntityAssign", component: UserEntityAssign },
+  { path: "/api/user-entities/update", name: "UserEntityUpdate", component: UserEntityUpdate },
+  { path: "/api/user-entities/remove", name: "UserEntityRemove", component: UserEntityRemove },
+  // { path: "/api/user-entities/:id", name: "UserEntityDetail", component: UserEntityDetail, props: true },
 ];
 
 const router = createRouter({

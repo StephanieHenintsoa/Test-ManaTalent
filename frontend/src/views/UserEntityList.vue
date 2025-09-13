@@ -27,11 +27,7 @@
       </tbody>
     </table>
 
-    <div class="pagination">
-      <button :disabled="page === 1" @click="page--">⬅ Précédent</button>
-      <span>Page {{ page }} / {{ totalPages }}</span>
-      <button :disabled="page === totalPages" @click="page++">Suivant ➡</button>
-    </div>
+    
   </div>
 </template>
 
@@ -99,18 +95,6 @@ th {
   background: #f3f4f6;
 }
 
-button {
-  padding: 6px 10px;
-  background: #4f46e5;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #4338ca;
-}
 
 .pagination {
   display: flex;

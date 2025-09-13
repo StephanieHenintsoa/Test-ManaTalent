@@ -63,15 +63,20 @@
     }
   };
   </script>
-  
   <style scoped>
-  .user-form {
-    margin-top: 15px;
-    padding: 10px;
-    border: 1px solid #ccc;
-  }
-  .user-form div {
-    margin-bottom: 10px;
-  }
-  </style>
+.user-form {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #e7dfdf;
+  color: white; /* ✅ rend tout le texte en blanc */
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.user-form div {
+  margin-bottom: 10px;
+}
+</style>
+
   

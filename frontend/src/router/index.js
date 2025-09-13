@@ -13,6 +13,8 @@ import UserEntityAssign from "../views/UserEntityAssign.vue";
 import UserEntityUpdate from "../views/UserEntityUpdate.vue";
 import UserEntityRemove from "../views/UserEntityRemove.vue";
 import UserEntityDetail from "../views/UserEntityDetail.vue";
+import EntityDetail from "../views/EntityDetail.vue";
+
 
 const routes = [
   // Users
@@ -21,6 +23,8 @@ const routes = [
 
   // Entities
   { path: "/api/entities", name: "EntityList", component: EntityList },
+  { path: "/api/entities/:id", name: "EntityDetail", component: EntityDetail, props: true },
+
   // { path: "/api/entities/:id", name: "EntityDetail", component: EntityDetail, props: true },
 
   // User-Entities

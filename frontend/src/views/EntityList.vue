@@ -22,6 +22,7 @@
                   <th>ID</th>
                   <th>Nom de l'entité</th>
                   <th>Description</th>
+                  <th>Détail</th>
                   <th>Actions</th>
                 </tr>
               </thead>
@@ -30,6 +31,11 @@
                   <td>{{ entity.id }}</td>
                   <td>{{ entity.name_entity }}</td>
                   <td>{{ entity.description }}</td>
+                  <td>
+                  <button class="btn" @click="detailEntity(entity.id)">
+                    <span>👁</span> Détail
+                  </button>
+                </td>
                   <td>
                     <button class="btn-edit" @click="editEntity(entity)">
                       <span>✏️</span> Modifier
@@ -68,6 +74,9 @@
       };
     },
     methods: {
+      detailEntity(id) {
+      this.$router.push(`/api/entities/${id}`);
+    },
       fetchEntities() {
         axios.get("http://localhost:3000/api/entities")
           .then(res => this.entities = res.data)

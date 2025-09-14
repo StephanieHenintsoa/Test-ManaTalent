@@ -27,37 +27,12 @@
             </router-link>
           </li>
 
-          <!-- User ↔ Entity -->
           <li class="nav-item">
-            <span class="nav-link">
-              <span class="nav-icon">🔗</span>
-              <span>User ↔ Entity</span>
-            </span>
-            <ul class="sub-nav-list">
-              <li>
-                <router-link to="/api/user-entities" class="nav-link" active-class="active">
-                  📋 Liste
-                </router-link>
-              </li>
-              <li>
-                <router-link to="/api/user-entities/assign" class="nav-link" active-class="active">
-                  ➕ Assigner
-                </router-link>
-              </li>
-              <li>
-                <router-link to="/api/user-entities/update" class="nav-link" active-class="active">
-                  ✏️ Mettre à jour
-                </router-link>
-              </li>
-              <li>
-                <router-link to="/api/user-entities/remove" class="nav-link" active-class="active">
-                  ❌ Supprimer
-                </router-link>
-              </li>
-            </ul>
+            <router-link to="/api/user-entities" class="nav-link" active-class="active">
+              <span class="nav-icon">👥</span>
+              <span>📋 Association</span>
+            </router-link>
           </li>
-
-          
 
         </ul>
       </div>

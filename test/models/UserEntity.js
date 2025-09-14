@@ -1,29 +1,42 @@
 const { DataTypes } = require("sequelize");
 const { sequelize } = require("../config/db");
-const User = require("./User");
-const Entity = require("./Entity");
 
-const UserEntity = sequelize.define("UserEntity", {
-  id_user: {
-    type: DataTypes.BIGINT,
+const UserEntity = sequelize.define('UserEntity', {
+  id: {
+    type: DataTypes.INTEGER,
     primaryKey: true,
-    references: { model: User, key: "id" },
-    onDelete: "CASCADE"
+    autoIncrement: true
+  },
+  id_user: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    references: {
+      model: 'users',
+      key: 'id'
+    }
   },
   id_entity: {
-    type: DataTypes.BIGINT,
-    primaryKey: true,
-    references: { model: Entity, key: "id" },
-    onDelete: "CASCADE"
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    references: {
+      model: 'entities',
+      key: 'id'
+    }
   },
   assigned_at: {
     type: DataTypes.DATE,
-    allowNull: false,
     defaultValue: DataTypes.NOW
   }
 }, {
-  tableName: "user_entity",
-  timestamps: false
+  tableName: 'user_entity',
+  timestamps: false,
+  // Contrainte d'unicité sur la combinaison id_user + id_entity
+  indexes: [
+    {
+      unique: true,
+      fields: ['id_user', 'id_entity']
+    }
+  ]
 });
 
 module.exports = UserEntity;

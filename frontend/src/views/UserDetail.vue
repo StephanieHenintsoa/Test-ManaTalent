@@ -7,7 +7,6 @@
       <p><strong>ID :</strong> {{ user.id }}</p>
       <p><strong>Nom d’utilisateur :</strong> {{ user.username }}</p>
       <p><strong>Email :</strong> {{ user.email }}</p>
-      <!-- <p><strong>Mot de passe (hashé ou masqué) :</strong> {{ user.password }}</p> -->
     </div>
     <div v-else>
       <p>Utilisateur introuvable</p>

@@ -55,7 +55,7 @@ export default {
   methods: {
     async fetchEntities() {
       try {
-        const res = await axios.get("http://localhost:3000/api/user-entity/all");
+        const res = await axios.get("http://localhost:3000/api/user-entities/all");
         // On prend la propriété associations
         this.entities = res.data.associations;
       } catch (err) {

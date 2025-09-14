@@ -60,7 +60,7 @@ export default {
     },
     async assignEntity() {
       try {
-        await axios.post("http://localhost:3000/api/user-entity/assign", {
+        await axios.post("http://localhost:3000/api/user-entities/assign", {
           userId: this.userId,
           entityId: this.entityId,
         });

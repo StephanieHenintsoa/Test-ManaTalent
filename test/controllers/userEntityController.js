@@ -5,7 +5,7 @@ const UserEntity = require("../models/UserEntity");
 
 // ------------------------
 // Assigner une entité à un utilisateur
-// POST /api/user-entity/assign
+// POST /api/user-entities/assign
 // ------------------------
 const assignEntityToUser = async (req, res) => {
   try {
@@ -55,7 +55,7 @@ const assignEntityToUser = async (req, res) => {
 
 // ------------------------
 // Récupérer toutes les entités d'un utilisateur
-// GET /api/user-entity/user/:userId
+// GET /api/user-entities/user/:userId
 // ------------------------
 const getEntitiesOfUser = async (req, res) => {
   try {
@@ -91,7 +91,7 @@ const getEntitiesOfUser = async (req, res) => {
 
 // ------------------------
 // Récupérer tous les utilisateurs liés à une entité
-// GET /api/user-entity/entity/:entityId
+// GET /api/user-entities/entity/:entityId
 // ------------------------
 const getUsersOfEntity = async (req, res) => {
   try {
@@ -128,7 +128,7 @@ const getUsersOfEntity = async (req, res) => {
 
 // ------------------------
 // Retirer une entité d'un utilisateur
-// DELETE /api/user-entity/remove
+// DELETE /api/user-entities/remove
 // ------------------------
 const removeEntityFromUser = async (req, res) => {
   try {
@@ -172,7 +172,7 @@ const removeEntityFromUser = async (req, res) => {
 
 // ------------------------
 // Mettre à jour l'entité d'un utilisateur
-// PUT /api/user-entity/update
+// PUT /api/user-entities/update
 // ------------------------
 const updateEntityOfUser = async (req, res) => {
   try {
@@ -234,7 +234,7 @@ const updateEntityOfUser = async (req, res) => {
 
 // ------------------------
 // Lister toutes les relations user-entity
-// GET /api/user-entity/all
+// GET /api/user-entities/all
 // ------------------------
 const getAllUserEntities = async (req, res) => {
   try {

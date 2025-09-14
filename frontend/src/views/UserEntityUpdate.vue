@@ -72,7 +72,7 @@ export default {
     },
     async updateRelation() {
       try {
-        await axios.put("http://localhost:3000/api/user-entity/update", {
+        await axios.put("http://localhost:3000/api/user-entities/update", {
           userId: this.userId,
           oldEntityId: this.oldEntityId,
           newEntityId: this.newEntityId,

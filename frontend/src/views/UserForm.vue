@@ -43,7 +43,7 @@
           if (newUser) {
             this.form.username = newUser.username;
             this.form.email = newUser.email;
-            this.form.password = ""; // laisser vide pour modification
+            this.form.password = ""; 
           }
         }
       }

@@ -1,5 +1,4 @@
-// /controllers/entityController.js
-const Entity = require('../models/entity');
+const Entity = require('../models/Entity');
 
 exports.getAllEntities = async (req, res) => {
   try {

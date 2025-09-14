@@ -61,7 +61,7 @@ export default {
     },
     async removeRelation() {
       try {
-        await axios.delete("http://localhost:3000/api/user-entity/remove", {
+        await axios.delete("http://localhost:3000/api/user-entities/remove", {
           data: { userId: this.userId, entityId: this.entityId },
         });
         alert("✅ Relation supprimée !");

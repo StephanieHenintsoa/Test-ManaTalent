@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 const { testConnection, sequelize } = require("./config/db");
-const { User, Entity, UserEntity } = require("./models/Associations"); 
 const entityRoutes = require("./routes/entityRoutes");
 const userRoutes = require("./routes/userRoutes");
 const userEntityRoutes = require("./routes/userEntityRoutes");
@@ -25,7 +24,7 @@ sequelize.sync({ alter: true })
 // Routes
 app.use("/api/entities", entityRoutes);
 app.use("/api/users", userRoutes);
-app.use("/api/user-entity", userEntityRoutes);
+app.use("/api/user-entities", userEntityRoutes);
 
 app.get("/", (req, res) => {
   res.json({ message: "Hello Express + MySQL 🚀" });

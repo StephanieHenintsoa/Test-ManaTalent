@@ -1,6 +1,6 @@
 const User = require("../models/User");
+//
 
-// Récupérer tous les utilisateurs
 exports.getAllUsers = async (req, res) => {
   try {
     const users = await User.findAll();
@@ -11,7 +11,8 @@ exports.getAllUsers = async (req, res) => {
   }
 };
 
-// Récupérer un utilisateur par id
+//
+
 exports.getUserById = async (req, res) => {
   try {
     const { id } = req.params;
@@ -24,7 +25,8 @@ exports.getUserById = async (req, res) => {
   }
 };
 
-// Créer un nouvel utilisateur
+//
+
 exports.createUser = async (req, res) => {
   try {
     const { username, email, password } = req.body;
@@ -39,7 +41,8 @@ exports.createUser = async (req, res) => {
   }
 };
 
-// Mettre à jour un utilisateur
+//
+
 exports.updateUser = async (req, res) => {
   try {
     const { id } = req.params;
@@ -55,7 +58,8 @@ exports.updateUser = async (req, res) => {
   }
 };
 
-// Supprimer un utilisateur
+//
+
 exports.deleteUser = async (req, res) => {
   try {
     const { id } = req.params;

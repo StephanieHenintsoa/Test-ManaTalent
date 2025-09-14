@@ -3,7 +3,6 @@ const cors = require("cors");
 const { sequelize } = require("./config/db");
 require("./models/Associations");
 
-// Import de TOUTES les routes
 const userRoutes = require("./routes/userRoutes");
 const entityRoutes = require("./routes/entityRoutes");
 const userEntityRoutes = require("./routes/userEntityRoutes");
@@ -23,7 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 // Routes
 app.use("/api/users", userRoutes);
 app.use("/api/entities", entityRoutes);
-app.use("/api/user-entity", userEntityRoutes);
+app.use("/api/user-entities", userEntityRoutes);
 
 // Route de test
 app.get("/", (req, res) => {
